@@ -1,0 +1,314 @@
+/*import*/
+
+@import "../scss/medias";
+
+/* Vars o variables */
+
+$background-Nav: linear-gradient(90deg, rgba(2,0,36,1) 13%, rgba(5,83,102,1) 33%, rgba(19,97,116,1) 50%, rgba(29,152,177,1) 73%, rgba(29,124,228,1) 91%); 
+$background-footer: rgb(24, 12, 248);
+$color-hover-video:rgb(14, 4, 155);
+$color-letter: white;
+$back-h2-p: rgb(247, 231, 10);
+$padding-h2-p: 45px 45px;
+$subrayado: h2;
+
+/*Mixins con parámetros*/
+
+@mixin imgsizes ($height, $width, $padding) {
+
+    height: $height;
+    width: $width;
+    padding: $padding;
+
+}
+
+/*Mixin sin parámetros*/
+
+@mixin enlaces {
+
+    color: black;
+
+}
+
+/*Reset CSS*/
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Font family a utilizar*/
+
+body {
+
+    font-family: 'Playfair Display', serif;
+}
+
+/*Medidas Logo NavBar-Header*/
+
+.imgHeader {
+
+    height: 100px;
+    width: 100px;
+    
+}
+
+/*NavBar-Header*/
+
+.colorNav {
+
+    background: $background-Nav;
+    
+}
+
+/* Nesting o anidación*/
+
+ul { 
+
+    li:hover {
+
+        background-color: $color-hover-video;
+
+    }
+
+    a {
+
+        text-transform: uppercase;
+        margin-inline: 25px;
+
+    }
+
+}
+
+/*Nesting o anidación*/
+
+.dropdown-menu { 
+
+    background-color: rgba(29,152,177,1);
+    color: white;
+
+    li a {
+
+        color: white;
+
+        &:hover {
+
+            background-color: $color-hover-video;
+            color: white;
+            width: auto;
+    
+        }
+
+    }
+  
+}
+
+.navbar-center {
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+/*Comienzo de Body*/
+
+/*Bienvenida a la página*/
+
+.tituloPrincipal {
+
+    font-weight: bold;
+    color: $color-letter;
+    padding: 15px;
+    margin-bottom: 0;
+
+}
+
+/*Videos*/
+
+#iframe {
+
+    background-color: $color-hover-video;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 45px;
+
+}
+
+h2 {
+
+    color: $color-letter;
+    padding: $padding-h2-p;
+    margin: 0;
+    
+    a {
+
+        text-decoration: none;
+        color: $color-letter;
+    } 
+
+}
+
+.fondoh2  {
+ 
+
+    background-color: $back-h2-p;
+    color: $color-letter;
+    margin: 0;
+    padding: $padding-h2-p; 
+    
+}
+
+.fondop {
+
+    @extend .fondoh2;
+    color: black;
+    font-size: 20px;
+    
+}
+
+.acordeon {
+
+    background-color: $back-h2-p;
+
+}
+
+
+h3 {
+
+    margin: 0;
+    padding: 10px;
+    color: $color-letter;
+}
+
+
+.img-sizes { /*Mixins*/
+
+    @include imgsizes(250px,300px,15px);
+
+}
+
+.img-sizes_excep {
+
+    height: 450px;
+    width: 600px;
+}
+
+.enlaces {
+
+    @include enlaces;
+}
+
+.imagLink:hover {
+
+    transform: scale(0.5);
+    transition: 2.5s;
+
+ }
+
+.carousel-back{
+
+    background-color: $color-hover-video;
+    
+
+    .img-car {
+
+        height: 550px;
+       
+    }
+
+    .pad-car {
+
+        padding-top: 45px;
+    }
+
+}
+
+.fondo-img {/*Extend*/
+
+    @extend #iframe
+}
+
+#encuesta {
+
+    @extend h3;
+}
+
+.encuesta {
+
+    padding: 20px;
+    background-color: $color-hover-video;
+    
+}
+
+.placeholder {
+
+    background-color: white;
+    @extend .encuesta;
+}
+
+.textarea {
+
+    @include imgsizes(200px, 200px, 10px)
+}
+
+/*EACH*/
+
+$btns: black blue darkblue;
+
+@each $btn in $btns {
+
+    .btn-#{$btn}{
+
+        background-color: $btn;
+        color: $color-letter;
+        font-weight: bold;
+        padding: 10px;
+        margin-inline: 15px;
+        margin-top: 15px;
+    }
+}
+
+/*Footer*/
+
+footer { /* nesting o anidación*/
+
+    background: $background-footer;
+    color: $color-letter;
+    padding-top: 15px;
+
+    ol {
+
+        li {
+
+            padding-top: 10px;
+            list-style-type: none;
+
+            a {
+
+                color: white;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+        }
+
+    }
+
+    .imgFooter {
+
+        height: 120px;
+        width: 120px;
+        padding: 20px;
+    
+        &:hover {
+    
+            transform: rotate(100deg);
+            transition: 2.5s;
+        }
+        
+    }    
+
+}
