@@ -76,7 +76,7 @@ h2 {
     color: white; }
 
 .fondoh2, .fondop {
-  background-color: #f7e70a;
+  background-color: #fce565;
   color: white;
   margin: 0;
   padding: 45px 45px; }
@@ -86,8 +86,12 @@ h2 {
   font-size: 20px;
   text-align: justify; }
 
+.fondo-desg {
+  background-color: white;
+  font-size: 16px; }
+
 .acordeon {
-  background-color: #f7e70a; }
+  background-color: #fce565; }
 
 h3, #encuesta {
   margin: 0;
@@ -161,7 +165,7 @@ h3, #encuesta {
 /*Footer*/
 footer {
   /* nesting o anidación*/
-  background: #180cf8;
+  background: #047dc4;
   color: white;
   padding-top: 15px; }
   footer ol li {

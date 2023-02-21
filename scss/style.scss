@@ -5,10 +5,10 @@
 /* Vars o variables */
 
 $background-Nav: linear-gradient(90deg, rgba(2,0,36,1) 13%, rgba(5,83,102,1) 33%, rgba(19,97,116,1) 50%, rgba(29,152,177,1) 73%, rgba(29,124,228,1) 91%); 
-$background-footer: rgb(24, 12, 248);
+$background-footer: rgb(4, 125, 196);
 $color-hover-video:rgb(14, 4, 155);
 $color-letter: white;
-$back-h2-p: rgb(247, 231, 10);
+$back-h2-p: rgb(252, 229, 101);
 $padding-h2-p: 45px 45px;
 $subrayado: h2;
 
@@ -168,6 +168,13 @@ h2 {
     font-size: 20px;
     text-align: justify;
     
+}
+
+.fondo-desg {
+
+    background-color: white;
+    font-size: 16px;
+
 }
 
 .acordeon {
